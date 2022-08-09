@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tac Tac Toe</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <section>
+        <div class="container"></div>
+        <h1 class="game--title" >Tic Tac Toe</h1>
+        <div>
+        <!-- used to identify whos turn it is -->
+        <h3 id="whosTurn" class="alert alert-primary">X is up first!</h3>
+        </div>
+        <!-- used for creating the tic tac toe board -->
+        <div id="board">
+            <div data-index="1" class="tile right-border bottom-border"></div>
+            <div data-index="2" class="tile right-border bottom-border"></div>
+            <div data-index="3" class="tile bottom-border"></div>
+            <div data-index="4" class="tile right-border bottom-border"></div>
+            <div data-index="5" class="tile right-border bottom-border"></div>
+            <div data-index="6" class="tile bottom-border"></div>
+            <div data-index="7" class="tile right-border"></div>
+            <div data-index="8" class="tile right-border"></div>
+            <div data-index="9" class="tile"></div>
+            <div id="line" class="line"></div>
+        </div>
+        <br>
+    
+    </section>
+    <br>
+        <!-- used to show who won, and the button to play again -->
+        <div id="game-results" class="hidden">
+            <h2 id="game-status" class="alert alert-primary" role="alert">Winner of this game is X</h2>
+            <button id="game-restart" >Play The Game Again</button>
+        </div>
+          
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="tictactoe.js"></script>
+
+</body>
+</html>

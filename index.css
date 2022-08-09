@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* centering the players turn */
+h3 {
+    text-align: center;
+}
+/* styling for the Tic Tac Toe heading */
+h1 {
+        text-align: center;
+        background-color: darkblue;
+        color: aliceblue;
+}
+/* style for the button */
+button {
+    background-color: darkblue;
+    color: aliceblue;
+    border: aliceblue;
+    padding: 12px;
+    font-size: 1em;
+}
+/* will be used to hide the botton and who the winnder is until the game is over */
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+/* styling the board */
+#board{
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+    position: relative;
+}
+/* styling each tile */
+.tile{
+    color:darkblue;
+    margin: 10 px;
+    background-color: rgb(188, 182, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+/* making borders for the board */
+.right-border {
+    border-right: 0.2em solid black;
+}
+.bottom-border {
+    border-bottom: 0.2em solid black;
+}
+/* making the lines for to show the '3 in a row' */
+.line {
+    position: absolute;
+    background-color: red;
+}
+
+.line-row-1 {
+    width: 100%;
+    height: 6px;   
+    top: 15%;
+}
+
+.line-row-2 {
+    width: 100%;
+    height: 6px;   
+    top: 48%;
+}
+
+.line-row-3 {
+    width: 100%;
+    height: 6px;   
+    top: 83%;
+}
+
+.line-column-1 {
+    height: 100%;
+    width: 6px;   
+    left:  15%;
+}
+
+.line-column-2 {
+    height: 100%;
+    width: 6px;   
+    left: 48%;
+}
+
+.line-column-3 {
+    height: 100%;
+    width: 6px;   
+    left: 83%;
+}
+
+.line-diagonal-right {
+    width: 90%;
+    height: 6px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.line-diagonal-left {
+    width: 90%;
+    height: 6px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+/* box to show the who wins */
+#game-results {
+    border: darkblue 10px solid;
+    text-align: center;
+    margin-top: 50 px;
+    width: 50%;
+    padding: 50px;
+}
+/* allows whoever is playing to hover over a spot and see their X or O */
+.x-hover:hover::after{
+    content: "X";
+    opacity: 0.4;
+}
+
+.o-hover:hover::after{
+    content: "O";
+    opacity: 0.4;
+}
